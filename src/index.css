@@ -175,12 +175,23 @@ body {
   .head-container {
     display: flex;
     height: max-content;
-  }
-  .head-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .head-icon {
+    width: 100vw;
+  }
+  .head-icon img {
+    width: 40vw;
+  }
+  .head-text {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    width: 100vw;
+  }
+  
   .blog-view-container{
     width: 100vw;
     /* padding: 5px; */

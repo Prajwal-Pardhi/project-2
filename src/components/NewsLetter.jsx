@@ -24,6 +24,7 @@ const NewsLetter = () => {
           <img src="logo.jpeg" alt="img" />
         </div>
         <div className="head-text">
+        <div className="blog-decoration ml-10"></div>
           <div className="head-title-text">
             WELCOME TO LUXURY <br />
             IN TASTE - LIT
@@ -60,9 +61,9 @@ const NewsLetter = () => {
       <div className="blog-container"></div>
       <div className="newsletter-container">
         <div className="newsletter-content">
-          <h1 style={{ color: "yellow", fontWeight:"bold"}}>Subscribe to LIT</h1>
-          <h1>to receive all about fashion</h1>
-          <h4>Join the fashion-gaming community and get early updates</h4>
+          <p style={{ color: "yellow", fontWeight:"bold"}}>Subscribe to LIT</p>
+          <p>to receive all about fashion</p>
+          {/* <h4>Join the fashion-gaming community and get early updates</h4> */}
           {submitted ? (
             <h1>Thank you for subscribing!</h1>
           ) : (

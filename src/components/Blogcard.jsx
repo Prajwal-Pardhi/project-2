@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ heading, description }) => {
@@ -8,8 +9,8 @@ const BlogCard = ({ heading, description }) => {
       <h2 className="blog-heading">{heading}</h2>
       <p className="blog-desc">{description}</p>
 
-      <Link to={`/blog/${heading}`} className="blog-details-btn">
-        <button className="blog-details-btn">Details</button>
+      <Link to={`/blog/${heading}`} style={{textDecoration:"none"}} >
+        <button className="blog-details-btn" style={{display:"flex", alignItems:"center"}}>Details <IoIosArrowForward style={{fontSize:"15px", marginLeft:"3px", color:"pink"}}/></button>
       </Link>
     </div>
   );

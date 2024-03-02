@@ -8,7 +8,7 @@ const BlogView = () => {
   const dummmmy_data = (
     <div>
       <p>
-        &nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
+        &nbsp;&nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Dolores, tenetur? Rerum perferendis
         placeat cumque voluptatibus ad reiciendis sunt libero cupiditate, labore
         repellat, similique cum facilis dignissimos officiis unde facere. Sint
@@ -22,7 +22,7 @@ const BlogView = () => {
         ipsa facere a dignissimos, quam dolore.
       </p>
       <p>
-        &nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
+        &nbsp;&nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Dolores, tenetur? Rerum perferendis
         placeat cumque voluptatibus ad reiciendis sunt libero cupiditate, labore
         repellat, similique cum facilis dignissimos officiis unde facere. Sint
@@ -36,7 +36,7 @@ const BlogView = () => {
         ipsa facere a dignissimos, quam dolore.
       </p>
       <p>
-        &nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
+        &nbsp;&nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Dolores, tenetur? Rerum perferendis
         placeat cumque voluptatibus ad reiciendis sunt libero cupiditate, labore
         repellat, similique cum facilis dignissimos officiis unde facere. Sint
@@ -50,7 +50,7 @@ const BlogView = () => {
         ipsa facere a dignissimos, quam dolore.
       </p>
       <p>
-        &nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
+        &nbsp;&nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Dolores, tenetur? Rerum perferendis
         placeat cumque voluptatibus ad reiciendis sunt libero cupiditate, labore
         repellat, similique cum facilis dignissimos officiis unde facere. Sint
@@ -64,7 +64,7 @@ const BlogView = () => {
         ipsa facere a dignissimos, quam dolore.
       </p>
       <p>
-        &nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
+        &nbsp;&nbsp;This is the full content of the blog post. Lorem ipsum dolor sit
         amet consectetur adipisicing elit. Dolores, tenetur? Rerum perferendis
         placeat cumque voluptatibus ad reiciendis sunt libero cupiditate, labore
         repellat, similique cum facilis dignissimos officiis unde facere. Sint

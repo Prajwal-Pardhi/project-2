@@ -24,7 +24,7 @@ const NewsLetter = () => {
           <img src="logo.jpeg" alt="img" />
         </div>
         <div className="head-text">
-        <div className="blog-decoration ml-10"></div>
+          <div className="blog-decoration ml-10"></div>
           <div className="head-title-text">
             WELCOME TO LUXURY <br />
             IN TASTE - LIT
@@ -35,7 +35,8 @@ const NewsLetter = () => {
             sustainable goods on our Marketplace. Enhance your digital persona
             with the Avatar Store, featuring digital clothes from top brands.
             Shop effortlessly with image recognition, ensuring direct product
-            links for any upload. LIT, where your unique expression knows no boundaries.
+            links for any upload. LIT, where your unique expression knows no
+            boundaries.
           </div>
         </div>
       </div>
@@ -61,7 +62,9 @@ const NewsLetter = () => {
       <div className="blog-container"></div>
       <div className="newsletter-container">
         <div className="newsletter-content">
-          <p style={{ color: "yellow", fontWeight:"bold"}}>Subscribe to LIT</p>
+          <p style={{ color: "yellow", fontWeight: "bold" }}>
+            Subscribe to LIT
+          </p>
           <p>to receive all about fashion</p>
           {/* <h4>Join the fashion-gaming community and get early updates</h4> */}
           {submitted ? (

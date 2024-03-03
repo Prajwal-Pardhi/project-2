@@ -79,8 +79,9 @@ body {
 .blog-decoration {
   width: 5vw;
   height: 2px;
+  width: 60px;
   margin-top: 20px;
-  background-image: linear-gradient(to right, rgb(210, 5, 179), blue);
+  background-image: linear-gradient(to right, #BD00FF, #CC00FF);
 }
 .blog-heading {
   margin-top: 10px;
@@ -306,7 +307,7 @@ body {
   }
 
   .blog-decoration {
-    width: 60px;
+    
   }
 
   /* Footer css ------------- */

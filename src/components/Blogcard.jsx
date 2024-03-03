@@ -10,7 +10,7 @@ const BlogCard = ({ heading, description }) => {
       <p className="blog-desc">{description}</p>
 
       <Link to={`/blog/${heading}`} style={{textDecoration:"none"}} >
-        <button className="blog-details-btn" style={{display:"flex", alignItems:"center"}}>Details <IoIosArrowForward style={{fontSize:"15px", marginLeft:"3px", color:"pink"}}/></button>
+        <button className="blog-details-btn" style={{display:"flex", alignItems:"center"}}>Details <IoIosArrowForward style={{fontSize:"15px", marginLeft:"3px", color:"#CC00FF"}}/></button>
       </Link>
     </div>
   );

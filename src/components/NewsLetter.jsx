@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 // import './NewsLetter.css';
 import BlogCard from "./Blogcard";
+import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const NewsLetter = () => {
   const [email, setEmail] = useState("");
@@ -62,10 +65,10 @@ const NewsLetter = () => {
       <div className="blog-container"></div>
       <div className="newsletter-container">
         <div className="newsletter-content">
-          <p style={{ color: "#4A2574", fontWeight: "bold" }}>
+          <p style={{ color: "#7338A0", fontWeight: "bold" }}>
             Subscribe to LIT
           </p>
-          <p>to receive all about fashion</p>
+          <p >to receive all about fashion</p>
           {/* <h4>Join the fashion-gaming community and get early updates</h4> */}
           {submitted ? (
             <h1>Thank you for subscribing!</h1>
@@ -81,6 +84,32 @@ const NewsLetter = () => {
               <button type="submit">Subscribe</button>
             </form>
           )}
+        </div>
+      </div>
+      <div className="blog-footer-container">
+      <div className="blog-footer">
+          <div className="title-and-icons">
+            <div className="blog-social-title">Luxury In Taste - LIT</div>
+            <div className="social-icons">
+              <div className="single-icon"><Link to='https://www.youtube.com' target="_blank"><FaYoutube style={{ fontSize: "30px", color: "red" }} /></Link></div>
+              <div className="single-icon"><Link to='#' target="_blank"><FaFacebook style={{ fontSize: "30px", color: "#3b5998" }} /></Link></div>
+              <div className="single-icon"><Link to='https://www.instagram.com/luxuryintaste?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target="_blank"><FaInstagram style={{ fontSize: "30px", color: "#C13584" }} /></Link></div>
+              <div className="single-icon"><Link to='#' target="_blank"><FaTwitter style={{ fontSize: "30px", color: "#1DA1F2" }} /></Link></div>
+              <div className="single-icon"><Link to='https://www.linkedin.com/company/luxury-in-taste-lit/' target="_blank"><FaLinkedin style={{ fontSize: "30px", color: "#0077B5" }} /></Link></div>
+            </div>
+          </div>     
+
+          <div className="footer-options">
+            <div className="single-option" >Terms and condition</div>
+            <div className="single-option">Contact</div>
+            <div className="single-option">Privacy</div>
+            <div className="single-option">Newsletter</div>
+            <div className="single-option">Our Team</div>
+            <div className="single-option">Careers</div>
+            <div className="single-option">Subscribe</div>
+            <div className="single-option">Feedback</div>
+          </div>
+
         </div>
       </div>
     </>

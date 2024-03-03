@@ -102,8 +102,9 @@ const BlogView = () => {
     <div className="blog-view-main-container">
       <div className="blog-view-container">
         <div className="blog-view-heading">{heading}</div>
-        <img src="/blog_img.jpg" alt="img" className="blog-img1" />
+        
         <div className="blog-view-content">
+        <img src="/blog_img.jpg" alt="img" className="blog-img1" />
           <div>{blogData[heading].content}</div>
         </div>
         <div className="more-blog-btn-container">
@@ -120,11 +121,11 @@ const BlogView = () => {
           <div className="title-and-icons">
             <div className="blog-social-title">Luxury In Taste - LIT</div>
             <div className="social-icons">
-              <div className="single-icon"><Link to='https://www.youtube.com'><FaYoutube style={{ fontSize: "30px", color: "red" }} /></Link></div>
-              <div className="single-icon"><Link to='#'><FaFacebook style={{ fontSize: "30px", color: "#3b5998" }} /></Link></div>
-              <div className="single-icon"><Link to='#'><FaInstagram style={{ fontSize: "30px", color: "#C13584" }} /></Link></div>
-              <div className="single-icon"><Link to='#'><FaTwitter style={{ fontSize: "30px", color: "#1DA1F2" }} /></Link></div>
-              <div className="single-icon"><Link to='#'><FaLinkedin style={{ fontSize: "30px", color: "#0077B5" }} /></Link></div>
+              <div className="single-icon"><Link to='https://www.youtube.com' target="_blank"><FaYoutube style={{ fontSize: "30px", color: "red" }} /></Link></div>
+              <div className="single-icon"><Link to='#' target="_blank"><FaFacebook style={{ fontSize: "30px", color: "#3b5998" }} /></Link></div>
+              <div className="single-icon"><Link to='https://www.instagram.com/luxuryintaste?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target="_blank"><FaInstagram style={{ fontSize: "30px", color: "#C13584" }} /></Link></div>
+              <div className="single-icon"><Link to='#' target="_blank"><FaTwitter style={{ fontSize: "30px", color: "#1DA1F2" }} /></Link></div>
+              <div className="single-icon"><Link to='https://www.linkedin.com/company/luxury-in-taste-lit/' target="_blank"><FaLinkedin style={{ fontSize: "30px", color: "#0077B5" }} /></Link></div>
             </div>
           </div>     
 

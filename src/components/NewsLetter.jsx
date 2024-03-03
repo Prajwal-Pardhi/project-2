@@ -62,7 +62,7 @@ const NewsLetter = () => {
       <div className="blog-container"></div>
       <div className="newsletter-container">
         <div className="newsletter-content">
-          <p style={{ color: "yellow", fontWeight: "bold" }}>
+          <p style={{ color: "#4A2574", fontWeight: "bold" }}>
             Subscribe to LIT
           </p>
           <p>to receive all about fashion</p>

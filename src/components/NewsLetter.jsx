@@ -86,7 +86,7 @@ const NewsLetter = () => {
           )}
         </div>
       </div>
-      <div className="blog-footer-container">
+      <div className="blog-footer-container blog-footer-container2">
       <div className="blog-footer">
           <div className="title-and-icons">
             <div className="blog-social-title">Luxury In Taste - LIT</div>

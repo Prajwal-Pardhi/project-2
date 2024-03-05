@@ -145,7 +145,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #4A2574;
+  background-color: #2d124c;
   width: 100%;
   /* height: 100vh; */
 }
@@ -162,7 +162,7 @@ body {
   margin-top: 30px;
   padding: 20px;
   font-size: large;
-  background-color: #7338A0;
+  background-color: #482363;
   color: white;
   border-radius: 20px;
 }
@@ -234,7 +234,7 @@ body {
   padding: 10px 25px;
   border-radius: 15px;
   font-size: 15px;
-  background-color: #9E72C3;
+  background-color: #68269a;
   color: white;
   border: none;
   font-weight: bold;

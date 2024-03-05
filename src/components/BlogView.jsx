@@ -87,15 +87,19 @@ const BlogView = () => {
   const blogData = {
     "THE REALM OF SUSTAINABILITY": {
       content: dummmmy_data,
+      imgPath: "/newsImgs/sustainability.jpeg",
     },
     "ALL IN LUXURY": {
       content: dummmmy_data,
+      imgPath: "/newsImgs/luxury_fashion.jpeg",
     },
     "WHATS FAST IN FASHION": {
       content: dummmmy_data,
+      imgPath: "/newsImgs/fast_fashion.jpeg",
     },
     "WHAT'S HOT IN THE SNEAKER WORLD": {
       content: dummmmy_data,
+      imgPath: "/newsImgs/sneaker.jpeg",
     },
   };
   return (
@@ -104,7 +108,7 @@ const BlogView = () => {
         <div className="blog-view-heading">{heading}</div>
         
         <div className="blog-view-content">
-        <img src="/blog_img.jpg" alt="img" className="blog-img1" />
+        <img src={blogData[heading].imgPath} alt="img" className="blog-img1" />
           <div>{blogData[heading].content}</div>
         </div>
         <div className="more-blog-btn-container">

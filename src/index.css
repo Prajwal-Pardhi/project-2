@@ -216,7 +216,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2d124c;
+  background-color: #786485;
   width: 100%;
   /* height: 100vh; */
 }
@@ -233,7 +233,7 @@ body {
   margin-top: 30px;
   padding: 20px;
   font-size: large;
-  background-color: #482363;
+  background-color: #565358;
   color: white;
   border-radius: 20px;
 }

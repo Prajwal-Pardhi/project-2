@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-// import './NewsLetter.css';
 import BlogCard from "./Blogcard";
+import Navbar from "./Navbar";
 import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -22,6 +22,7 @@ const NewsLetter = () => {
 
   return (
     <>
+      {/* <Navbar /> */}
       <div className="head-container">
         <div className="head-icon">
           <img src="logo.jpeg" alt="img" />
@@ -43,26 +44,36 @@ const NewsLetter = () => {
           </div>
         </div>
       </div>
+      <div className="subscribe-block-container">
+        <div className="subscribe-block" onClick={<Link to={"/"}></Link>}>
+          <p className="tagline">Stay updated with our latest news!</p>
+          <button className="subscribe-button">CLICK HERE TO SUBSCRIBE</button>
+        </div>
+      </div>
       <div className="blog-grid-container">
         <BlogCard
           heading="THE REALM OF SUSTAINABILITY"
+          imgPath = "/newsImgs/sustainability.jpeg"
           description="Discover new sustainable brands reshaping the market, delve into the latest news on eco-conscious goods, and explore much more in the realme of sustainable fashion."
         />
         <BlogCard
           heading="ALL IN LUXURY"
+          imgPath = "/newsImgs/luxury_fashion.jpeg"
           description="Indulge in the opulence of high-end fashion, uncovering the latest trends, exclusive releases, and the opitome of luxury in every stitch and design"
         />
         <BlogCard
           heading="WHATS FAST IN FASHION"
+          imgPath = "/newsImgs/fast_fashion.jpeg"
           description="Stay ahead with real-time insights into the fast-paced world of fashion. Discover rapid trends, quick releases, and the latest buzz in the ever-evolving fashion landscape."
         />
         <BlogCard
           heading="WHAT'S HOT IN THE SNEAKER WORLD"
+          imgPath = "/newsImgs/sneaker.jpeg"
           description="Step into the sneaker culture with a spotlight on the latest kicks, collaborations, and must-have styles. Stay informed on the pulse of the sneaker world."
         />
         {/* Add more instances of BlogCard component as needed */}
       </div>
-      <div className="blog-container"></div>
+      {/* <div className="blog-container"></div> */}
       <div className="newsletter-container">
         <div className="newsletter-content">
           <p style={{ color: "#7338A0", fontWeight: "bold" }}>

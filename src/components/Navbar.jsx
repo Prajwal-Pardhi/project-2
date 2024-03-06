@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-// import './Navbar.css'; // Import custom CSS for navbar styling
+// import '../Navbar.css'; // Import custom CSS for navbar styling
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

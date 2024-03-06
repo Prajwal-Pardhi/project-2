@@ -1,20 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { IoMenu } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 // import './Navbar.css'; // Import custom CSS for navbar styling
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    useEffect(() => {
-        const handleResize = () => {
-                setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
       };
@@ -28,17 +18,14 @@ const Navbar = () => {
             <div className="menu-container">
                 {/* Menu button */}
                 <IoMenu className="menu-icon" onClick={toggleMenu} size={30}/>
-                {/* <button className="menu-button" onClick={toggleMenu}>
-                    <IoMenu />
-                </button> */}
 
                 {/* Side window */}
                 {isMenuOpen && (
                     <div className="side-window">
                     <ul>
-                        <li>About Us</li>
-                        <li>Contact</li>
-                        <li>Newsletter</li>
+                        <li><Link to="/" style={{textDecoration:"none", color:"white"}}>About Us</Link></li>
+                        <li><Link to="/" style={{textDecoration:"none", color:"white"}}>Contact</Link></li>
+                        <li><Link to="/" style={{textDecoration:"none", color:"white"}}>Newsletter</Link></li>
                     </ul>
                     </div>
                 )}

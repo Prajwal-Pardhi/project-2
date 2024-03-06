@@ -22,7 +22,7 @@ const NewsLetter = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="head-container">
         <div className="head-icon">
           <img src="logo.jpeg" alt="img" />

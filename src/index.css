@@ -105,7 +105,7 @@ body {
 }
 .blog-desc {
   margin-right: 10px;
-  color: #7f7b7b;
+  color: #dfdfdf;
   font-size: 16px;
   line-height: 25px;
   margin-top: 20px;
@@ -155,7 +155,7 @@ body {
   font-size: 16px;
   line-height: 25px;
   padding: 10px;
-  color: #7f7b7b;
+  color: #dfdfdf;
 }
 /* Subscribe Block CSS ------------------------------------------------ */
 .subscribe-block-container{

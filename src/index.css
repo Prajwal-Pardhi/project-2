@@ -133,7 +133,7 @@ body {
   align-items: center;
 }
 .head-icon img {
-  width: 300px;
+  width: 400px;
   border-radius: 50%;
 }
 .head-text {
@@ -170,6 +170,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  left: 20%;
   width: 50%;
   padding: 20px;
   /* border: 1px solid #ccc; */
@@ -182,7 +183,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background: url("colorful_bg.jpg") no-repeat center center/cover;
+  background: url("newsImgs/colorful_bg.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -387,6 +388,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
+  margin-left: 40vw;
 }
 .nav-links li {
   margin-left: 20px;
@@ -394,6 +396,7 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
+  padding: 0px 20px;
 }
 .nav-subscribe-btn{
   padding: 10px 20px;
@@ -448,6 +451,7 @@ body {
   /* Subscribe block ---------------- */
   .subscribe-block {
      width: 70%;
+     left: 0%;
   } 
 
   /* Full blog page css ------------- */
@@ -519,6 +523,7 @@ body {
     width: 100%;
     background-color: black;
     padding: 20px 0px;
+    margin-left: 0%;
   }
 
   /* .nav-links li {
@@ -528,6 +533,7 @@ body {
 
   .nav-links a {
     color: white;
+    padding: 0px 0px;
   }
 
   .show-menu {

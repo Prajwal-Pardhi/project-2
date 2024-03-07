@@ -18,13 +18,12 @@ const Navbar = () => {
             <div className="menu-container">
                 {/* Menu button */}
                 <IoMenu className="menu-icon" onClick={toggleMenu} size={30}/>
-
                 {/* Side window */}
                 {isMenuOpen && (
                     <div className="side-window">
                     <ul>
-                        <li><Link to="/" style={{textDecoration:"none", color:"white"}}>About Us</Link></li>
-                        <li><Link to="/" style={{textDecoration:"none", color:"white"}}>Contact</Link></li>
+                        <li><Link to="/about_us" style={{textDecoration:"none", color:"white"}}>About Us</Link></li>
+                        <li><Link to="/contact_us" style={{textDecoration:"none", color:"white"}}>Contact</Link></li>
                         <li><Link to="/" style={{textDecoration:"none", color:"white"}}>Newsletter</Link></li>
                     </ul>
                     </div>
@@ -35,10 +34,10 @@ const Navbar = () => {
         <div className="mid-part">
             <ul className="nav-links">
             {/* Options on the right */}
-            <li><a href="/">Sustainability</a></li>
-            <li><a href="/">Fast Fashion</a></li>
-            <li><a href="/">Sneaker</a></li>
-            <li><a href="/">Luxury</a></li>
+            <li><Link to={"#"}>Sustainability</Link></li>
+            <li><Link to={"#"}>Fast Fashion</Link></li>
+            <li><Link to={"#"}>Sneaker</Link></li>
+            <li><Link to={"#"}>Luxury</Link></li>
             </ul>
         </div>
         <div className="right-part">

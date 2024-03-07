@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+// import photo from ''
 
 const BlogCard = ({ heading, imgPath, description }) => {
   return (

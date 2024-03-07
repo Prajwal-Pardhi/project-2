@@ -93,6 +93,7 @@ body {
   align-items: center;
   height: 60%;
   width: 100%;
+  margin-top: 20px;
 }
 .blog-card-img {
   width: 70%;
@@ -117,6 +118,7 @@ body {
   border: none;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 10px;
 }.blog-details-btn:hover {
   transform: scale(1.1);
 }
@@ -183,7 +185,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background: url("newsImgs/colorful_bg.jpg") no-repeat center center/cover;
+  background: url("/newsImgs/colorful_bg.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -306,7 +308,7 @@ body {
   padding: 10px 25px;
   border-radius: 15px;
   font-size: 15px;
-  background-color: #68269a;
+  background-color: #565358;
   color: white;
   border: none;
   font-weight: bold;
@@ -314,6 +316,7 @@ body {
 }
 .more-blog-btn:hover {
   transform: scale(1.1);
+  text-shadow: 0px 0px 2px lightyellow ;
 }
 
 /* Navbar styles -------------------------------------------------------- */
@@ -388,7 +391,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-left: 40vw;
+  margin-left: 20vw;
 }
 .nav-links li {
   margin-left: 20px;
@@ -461,6 +464,7 @@ body {
   }
   .blog-view-heading {
     font-size: x-large;
+    font-weight: bold;
     margin-left: 10px;
   }
   .blog-view-content {

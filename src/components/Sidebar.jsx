@@ -36,7 +36,7 @@ const Sidebar = ({ showMenu, setShowMenu }) => {
             to="/contact_us"
             style={{ textDecoration: "none", color: "white" }}
           >
-            Contact
+            Contact Us
           </Link>
         </li>
         <li>

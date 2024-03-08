@@ -52,21 +52,25 @@ const NewsLetter = () => {
       </div>
       <div className="blog-grid-container">
         <BlogCard
+          index={1}
           heading="THE REALM OF SUSTAINABILITY"
           imgPath = "/newsImgs/sustainability.jpeg"
           description="Discover new sustainable brands reshaping the market, delve into the latest news on eco-conscious goods, and explore much more in the realme of sustainable fashion."
         />
         <BlogCard
+          index={2}
           heading="ALL IN LUXURY"
           imgPath = "/newsImgs/luxury_fashion.jpeg"
           description="Indulge in the opulence of high-end fashion, uncovering the latest trends, exclusive releases, and the opitome of luxury in every stitch and design"
         />
         <BlogCard
+        index={3}
           heading="WHATS FAST IN FASHION"
           imgPath = "/newsImgs/fast_fashion.jpeg"
           description="Stay ahead with real-time insights into the fast-paced world of fashion. Discover rapid trends, quick releases, and the latest buzz in the ever-evolving fashion landscape."
         />
         <BlogCard
+          index={4}
           heading="WHAT'S HOT IN THE SNEAKER WORLD"
           imgPath = "/newsImgs/sneaker.jpeg"
           description="Step into the sneaker culture with a spotlight on the latest kicks, collaborations, and must-have styles. Stay informed on the pulse of the sneaker world."

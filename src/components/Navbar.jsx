@@ -8,6 +8,7 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
       };
+    const headings = ["THE REALM OF SUSTAINABILITY", "WHATS FAST IN FASHION", "WHAT'S HOT IN THE SNEAKER WORLD", "ALL IN LUXURY"];
   return (
     <nav className="navbar">
         <div className="navbar-container">
@@ -34,10 +35,10 @@ const Navbar = () => {
         <div className="mid-part">
             <ul className="nav-links">
             {/* Options on the right */}
-            <li><Link to={"#"}>Sustainability</Link></li>
-            <li><Link to={"#"}>Fast Fashion</Link></li>
-            <li><Link to={"#"}>Sneaker</Link></li>
-            <li><Link to={"#"}>Luxury</Link></li>
+            <li><Link to={`/blog/${headings[0] }`}>Sustainability</Link></li>
+            <li><Link to={`/blog/${headings[1] }`}>Fast Fashion</Link></li>
+            <li><Link to={`/blog/${headings[2] }`}>Sneaker</Link></li>
+            <li><Link to={`/blog/${headings[3] }`}>Luxury</Link></li>
             </ul>
         </div>
         <div className="right-part">

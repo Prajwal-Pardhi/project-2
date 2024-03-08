@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 // import photo from ''
 
-const BlogCard = ({ heading, imgPath, description }) => {
+const BlogCard = ({ index, heading, imgPath, description }) => {
   return (
     <div className="blog-card-main">
       <div className="blog-decoration"></div>

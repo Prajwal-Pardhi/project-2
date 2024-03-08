@@ -26,6 +26,7 @@ const Sidebar = ({ showMenu, setShowMenu }) => {
         <li>
           <Link
             to="/about_us"
+            onClick={handleClick}
             style={{ textDecoration: "none", color: "white" }}
           >
             About Us
@@ -34,6 +35,7 @@ const Sidebar = ({ showMenu, setShowMenu }) => {
         <li>
           <Link
             to="/contact_us"
+            onClick={handleClick}
             style={{ textDecoration: "none", color: "white" }}
           >
             Contact Us
@@ -42,6 +44,7 @@ const Sidebar = ({ showMenu, setShowMenu }) => {
         <li>
           <Link
             to="/"
+            onClick={handleClick}
             style={{ textDecoration: "none", color: "white" }}
           >
             Newsletter

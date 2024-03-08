@@ -19,7 +19,7 @@ const Sidebar = ({ showMenu, setShowMenu }) => {
     <div className={`side-window ${showMenu ? 'show-sidebar' : ''}`}>
       
       <div className="close-button" onClick={handleClick}>
-        <RxCross2 className="text-white" />
+        <RxCross2 className="text-white" size={20}/>
         <p className="text-lit">LIT</p>
       </div>
       <ul>

@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   const headings = [
     "THE REALM OF SUSTAINABILITY",
-    "WHATS FAST IN FASHION",
+    "WHAT'S FAST IN FASHION",
     "WHAT'S HOT IN THE SNEAKER WORLD",
     "ALL IN LUXURY",
   ];
@@ -32,16 +32,16 @@ const Navbar = () => {
           <ul className="nav-links">
             {/* Options on the right */}
             <li>
-              <Link to={`/blog/${headings[0]}`}>Sustainability</Link>
+              <Link to={`/blog/${headings[0]}`}>Eco-Fashion</Link>
             </li>
             <li>
               <Link to={`/blog/${headings[1]}`}>Fast Fashion</Link>
             </li>
             <li>
-              <Link to={`/blog/${headings[2]}`}>Sneaker</Link>
+              <Link to={`/blog/${headings[2]}`}>Sneaker Market</Link>
             </li>
             <li>
-              <Link to={`/blog/${headings[3]}`}>Luxury</Link>
+              <Link to={`/blog/${headings[3]}`}>Haute Couture</Link>
             </li>
           </ul>
         </div>

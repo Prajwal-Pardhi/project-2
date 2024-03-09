@@ -61,11 +61,11 @@ const NewsLetter = () => {
           index={2}
           heading="ALL IN LUXURY"
           imgPath = "/newsImgs/luxury_fashion.jpeg"
-          description="Indulge in the opulence of high-end fashion, uncovering the latest trends, exclusive releases, and the opitome of luxury in every stitch and design"
+          description="Indulge in the opulence of high-end fashion, uncovering the latest trends, exclusive releases, and the epitome of luxury in every stitch and design"
         />
         <BlogCard
-        index={3}
-          heading="WHATS FAST IN FASHION"
+          index={3}
+          heading="WHAT'S FAST IN FASHION"
           imgPath = "/newsImgs/fast_fashion.jpeg"
           description="Stay ahead with real-time insights into the fast-paced world of fashion. Discover rapid trends, quick releases, and the latest buzz in the ever-evolving fashion landscape."
         />

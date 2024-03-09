@@ -95,7 +95,7 @@ const BlogView = () => {
       content: dummmmy_data,
       imgPath: "/newsImgs/luxury_fashion.jpeg",
     },
-    "WHATS FAST IN FASHION": {
+    "WHAT'S FAST IN FASHION": {
       content: dummmmy_data,
       imgPath: "/newsImgs/fast_fashion.jpeg",
     },
@@ -110,7 +110,7 @@ const BlogView = () => {
       <div className="blog-view-main-container">
         <div className="blog-view-container">
           <div className="blog-view-heading">{heading}</div>
-
+  
           <div className="blog-view-content">
             <img
               src={blogData[heading].imgPath}

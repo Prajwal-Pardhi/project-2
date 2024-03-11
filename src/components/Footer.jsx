@@ -49,7 +49,6 @@ const Footer = () => {
         </div>
 
         <div className="footer-options">
-          <div className="single-option">Terms and condition</div>
           <div className="single-option"><Link to="/contact_us" style={{textDecoration:"none", color:"white"}}>Contact</Link></div>
           <div className="single-option">Privacy</div>
           <div className="single-option"><Link to="/" style={{textDecoration:"none", color:"white"}}>Newsletter</Link></div>
@@ -57,6 +56,7 @@ const Footer = () => {
           <div className="single-option">Careers</div>
           <div className="single-option">Subscribe</div>
           <div className="single-option">Feedback</div>
+          <div className="single-option">Terms and condition</div>
         </div>
       </div>
     </div>

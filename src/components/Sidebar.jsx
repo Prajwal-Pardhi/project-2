@@ -53,7 +53,7 @@ const Sidebar = ({ showMenu, setShowMenu }) => {
       </ul>
 
       <div className="title-and-icons" style={{transform: "scale(0.5)",}}>
-          <div className="blog-social-title">Luxury In Taste - LIT</div>
+          <div className="blog-social-title" style={{textAlign:"center"}}>Luxury In Taste - LIT</div>
           <div className="social-icons">
             <div className="icons-in-sidebar">
             <div className="single-icon">

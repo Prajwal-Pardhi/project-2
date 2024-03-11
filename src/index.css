@@ -602,7 +602,7 @@ body {
     /* background-color: rgb(204 0 255 / 60%); */
     margin-right: 20px;
     font-size: 20px;
-    padding: 5px;
+    padding: 0px 5px 0px 5px;
     /* border-left: 1px solid #ccc; */
     /* border-radius: 10px; */
   }

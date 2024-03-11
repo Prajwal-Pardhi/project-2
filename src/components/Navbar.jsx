@@ -20,13 +20,12 @@ const Navbar = () => {
     <nav className="navbar">
         <Sidebar showMenu={isMenuOpen} setShowMenu={setIsMenuOpen} />
       <div className="navbar-container">
-        <div className="left-part" onClick={toggleMenu}>
+        <div className="left-part">
 
-          <div className="menu-container">
-
+          <div className="menu-container" onClick={toggleMenu}>
             <IoMenu className="menu-icon" size={30} />
           </div>
-          <div className="nav-title-name">LIT</div>
+          <div className="nav-title-name"><Link to={'https://lit-zi57.vercel.app/'} style={{textDecoration:'none', color:'white'}}>LIT</Link></div>
         </div>
         <div className="mid-part">
           <ul className="nav-links">

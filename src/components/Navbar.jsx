@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="menu-container" onClick={toggleMenu}>
             <IoMenu className="menu-icon" size={30} />
           </div>
-          <div className="nav-title-name"><Link to={'https://lit-zi57.vercel.app/'} style={{textDecoration:'none', color:'white'}}>LIT</Link></div>
+          <div className="nav-title-name"><Link to={'/'} style={{textDecoration:'none', color:'white'}}>LIT</Link></div>
         </div>
         <div className="mid-part">
           <ul className="nav-links">

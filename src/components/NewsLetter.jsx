@@ -43,14 +43,16 @@ const NewsLetter = () => {
             links for any upload. LIT, where your unique expression knows no
             boundaries.
           </div>
+          <div className="subscribe-block-container" >
+            <div className="subscribe-block" onClick={<Link to={"/"}></Link>}>
+              <p className="tagline">Stay updated with our latest news!</p>
+              <button className="subscribe-button">CLICK HERE TO SUBSCRIBE</button>
+            </div>
+          </div>
         </div>
+        
       </div>
-      <div className="subscribe-block-container" >
-        <div className="subscribe-block" onClick={<Link to={"/"}></Link>}>
-          <p className="tagline">Stay updated with our latest news!</p>
-          <button className="subscribe-button">CLICK HERE TO SUBSCRIBE</button>
-        </div>
-      </div>
+      
       <div className="blog-grid-container">
         <BlogCard
           index={1}

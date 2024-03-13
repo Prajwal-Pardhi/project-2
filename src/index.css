@@ -259,7 +259,7 @@ body {
   height: 60vh;
   object-fit: contain;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .blog-footer-container{
   /* margin-top: 30px; */
@@ -473,7 +473,7 @@ body {
 .single-blog-title{
   font-size: 40px;
   font-weight: bold;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   margin-left: 20px;
 }
 .single-blog-img-container{
@@ -492,7 +492,7 @@ body {
   margin-bottom: 20px;
 }
 .single-blog-content{
-  margin: 30px 10px 0px 10px;
+  margin: 15px 10px 0px 10px;
   padding: 20px 10px 10px 10px;
   font-size: large;
   background-color: #565358;

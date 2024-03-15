@@ -1,23 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import BlogCard from "./Blogcard";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import SubscribeModal from "./SubscribeModal";
 
 const NewsLetter = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState(""); //Email state for email input
+  const [submitted, setSubmitted] = useState(false); //Submitted state for email after clicking subscribe button
+  const [openModal, setOpenModal] = useState(false); //Modal for subscribe button
+  const newsletterRef = useRef(null);
 
+  const scrollToNewsletter = () => {
+    newsletterRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle submission logic here, e.g., sending data to server
+    // Handle submission logic here, e.g., sending data to database --------
     setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
     setEmail("");
   };
 
@@ -44,9 +53,10 @@ const NewsLetter = () => {
             boundaries.
           </div>
           <div className="subscribe-block-container" >
-            <div className="subscribe-block" onClick={<Link to={"/"}></Link>}>
+            <div className="subscribe-block">
               <p className="tagline">Stay updated with our latest news!</p>
-              <button className="subscribe-button">CLICK HERE TO SUBSCRIBE</button>
+              <button className="subscribe-button" onClick={scrollToNewsletter}>CLICK HERE TO SUBSCRIBE</button>
+              {/* {openModal && (<SubscribeModal openModal={openModal} setOpenModal={setOpenModal} />)} */}
             </div>
           </div>
         </div>
@@ -81,7 +91,7 @@ const NewsLetter = () => {
         {/* Add more instances of BlogCard component as needed */}
       </div>
       {/* <div className="blog-container"></div> */}
-      <div className="newsletter-container">
+      <div className="newsletter-container" ref={newsletterRef}>
         <div className="newsletter-content">
           <p style={{ color: "#7338A0", fontWeight: "bold" }}>
             Subscribe to LIT
@@ -100,6 +110,7 @@ const NewsLetter = () => {
                 required
               />
               <button type="submit">Subscribe</button>
+              
             </form>
           )}
         </div>

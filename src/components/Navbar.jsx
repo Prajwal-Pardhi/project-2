@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import SubscribeModal from "./SubscribeModal";
 
 // import '../Navbar.css'; // Import custom CSS for navbar styling
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -45,7 +47,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="right-part">
-          <button className="nav-subscribe-btn">Subscribe</button>
+          <button className="nav-subscribe-btn" onClick={()=>{
+            setOpenModal(true);
+          }}>Subscribe</button>
+          {openModal && (<SubscribeModal openModal={openModal} setOpenModal={setOpenModal} />)}
         </div>
       </div>
     </nav>

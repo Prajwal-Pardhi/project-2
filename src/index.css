@@ -362,6 +362,29 @@ body {
   align-items: center;
 }
 
+.right-part{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-login-btn{
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}.nav-login-btn:hover {
+  /* transform: scale(1.1); */
+  text-shadow: 0px 0px 10px yellow;
+}
+.nav-login-btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Logo styles */
 .nav-logo-img{
   width: 50px;

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../SubscribeModal.css";
 import { ImCross } from "react-icons/im";
 
-export const Modal = ({ openModal, setOpenModal }) => {
+export const Modal = ({ openSubscribeModal, setOpenSubscribeModal }) => {
   const [input, setInput] = useState("");
   const [emailSend, setEmailSend] = useState(false);
   const [email, setEmail] = useState("");
@@ -18,17 +18,10 @@ export const Modal = ({ openModal, setOpenModal }) => {
       // Send the email-----------
       setEmailSend(true);
       setTimeout(() => {
-        setOpenModal(false);
-      }, 100000);
-      // setEmailSend(true);
-      // setTimeout(() => {
-      //   setOpenModal(false);
-      // }, 1000);
+        setOpenSubscribeModal(false);
+      }, 1000);
     }
   };
-  // const sendEmail = () => {
-
-  // };
 
   return (
     <>
@@ -36,7 +29,7 @@ export const Modal = ({ openModal, setOpenModal }) => {
         <div className="main-container">
           <div className="main-content-container">
             <div className="modal-container">
-              <div className="close-icon" onClick={() => setOpenModal(false)}>
+              <div className="close-icon" onClick={() => setOpenSubscribeModal(false)}>
                 <ImCross size={15}/>
               </div>{" "}
               {/* Close icon */}

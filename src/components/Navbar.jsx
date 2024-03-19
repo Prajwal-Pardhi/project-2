@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
+import { CiLogin } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import SubscribeModal from "./SubscribeModal";
+import LoginPage from "./LoginPage";
+// import "../Navbar.css"; // Import custom CSS for navbar styling
 
 // import '../Navbar.css'; // Import custom CSS for navbar styling
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
+  const [openSubscribeModal, setOpenSubscribeModal] = useState(false);
+  const [openLoginModal, setOpenLoginModal] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -20,14 +24,17 @@ const Navbar = () => {
   ];
   return (
     <nav className="navbar">
-        <Sidebar showMenu={isMenuOpen} setShowMenu={setIsMenuOpen} />
+      <Sidebar showMenu={isMenuOpen} setShowMenu={setIsMenuOpen} />
       <div className="navbar-container">
         <div className="left-part">
-
           <div className="menu-container" onClick={toggleMenu}>
-            <IoMenu className="menu-icon" size={30} />
+            <IoMenu className="menu-icon" size={30} color="white" />
           </div>
-          <div className="nav-title-name"><Link to={'/'} style={{textDecoration:'none', color:'white'}}>LIT</Link></div>
+          <div className="nav-title-name">
+            <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+              LIT
+            </Link>
+          </div>
         </div>
         <div className="mid-part">
           <ul className="nav-links">
@@ -47,10 +54,34 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="right-part">
-          <button className="nav-subscribe-btn" onClick={()=>{
-            setOpenModal(true);
-          }}>Subscribe</button>
-          {openModal && (<SubscribeModal openModal={openModal} setOpenModal={setOpenModal} />)}
+          {/* Subscribe nutton------------ */}
+          <button
+            className="nav-subscribe-btn"
+            onClick={() => {
+              setOpenSubscribeModal(true);
+            }}
+          >
+            Subscribe
+          </button>
+          {openSubscribeModal && (
+            <SubscribeModal openSubscribeModal={openSubscribeModal} setOpenSubscribeModal={setOpenSubscribeModal} />
+          )}
+
+          {/* Login button--------------- */}
+          <button
+            className="nav-login-btn"
+            onClick={() => {
+              setOpenLoginModal(true);
+            }}
+          >
+            <div className="nav-login-btn-content">
+              <div style={{textWrap:'nowrap'}}>Sign In</div>
+              <CiLogin size={22}/>
+            </div>
+          </button>
+          {openLoginModal && (
+            <LoginPage openLoginModal={openLoginModal} setOpenLoginModal={setOpenLoginModal} />
+          )}
         </div>
       </div>
     </nav>

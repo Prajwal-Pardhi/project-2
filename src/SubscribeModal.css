@@ -87,7 +87,7 @@
 
 .modal-input {
   width: 350px;
-  height: 20px;
+  height: 10px;
   font-size: 0.95rem;
   margin-top: 5px;
   padding: 10px;
@@ -135,7 +135,7 @@
 }
 
 .modal-button-send {
-  background-color: rgb(192, 187, 187);
+  background-color: #d2c09f;
   color: black;
   padding: 0 50px;
   font-weight: bold;

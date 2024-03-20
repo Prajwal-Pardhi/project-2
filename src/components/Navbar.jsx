@@ -22,6 +22,15 @@ const Navbar = () => {
     "WHAT'S HOT IN THE SNEAKER WORLD",
     "ALL IN LUXURY",
   ];
+
+  function isUserLoggedIn() {
+    return !!localStorage.getItem("token");
+  }
+  function logoutFunc() {
+    localStorage.removeItem("token");
+    window.location.reload();
+  }
+
   return (
     <nav className="navbar">
       <Sidebar showMenu={isMenuOpen} setShowMenu={setIsMenuOpen} />
@@ -64,23 +73,40 @@ const Navbar = () => {
             Subscribe
           </button>
           {openSubscribeModal && (
-            <SubscribeModal openSubscribeModal={openSubscribeModal} setOpenSubscribeModal={setOpenSubscribeModal} />
+            <SubscribeModal
+              openSubscribeModal={openSubscribeModal}
+              setOpenSubscribeModal={setOpenSubscribeModal}
+            />
           )}
 
-          {/* Login button--------------- */}
-          <button
-            className="nav-login-btn"
-            onClick={() => {
-              setOpenLoginModal(true);
-            }}
-          >
+          {/* Login Logout button--------------- */}
+          <button className="nav-login-btn">
             <div className="nav-login-btn-content">
-              <div style={{textWrap:'nowrap'}}>Sign In</div>
-              <CiLogin size={22}/>
+              {isUserLoggedIn() ? (
+                <button className="nav-login-btn" onClick={logoutFunc}>
+                  Logout
+                </button>
+              ) : (
+                <button
+                  className="nav-login-btn"
+                  onClick={() => {
+                    setOpenLoginModal(true);
+                  }}
+                >
+                  <div className="nav-login-btn-content" >
+                    <div style={{ whiteSpace: "nowrap" }}>Sign In</div>
+                    <CiLogin size={22} />
+                  </div>
+                </button>
+              )}
             </div>
+            
           </button>
           {openLoginModal && (
-            <LoginPage openLoginModal={openLoginModal} setOpenLoginModal={setOpenLoginModal} />
+            <LoginPage
+              openLoginModal={openLoginModal}
+              setOpenLoginModal={setOpenLoginModal}
+            />
           )}
         </div>
       </div>

@@ -6,12 +6,14 @@ import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import SubscribeModal from "./SubscribeModal";
+import { LoginContext } from "../LoginContext";
 
 const NewsLetter = () => {
   const [email, setEmail] = useState(""); //Email state for email input
   const [submitted, setSubmitted] = useState(false); //Submitted state for email after clicking subscribe button
   const [openModal, setOpenModal] = useState(false); //Modal for subscribe button
   const newsletterRef = useRef(null);
+  const [loginStatus, setLoginStatus] = useState(false);
 
   const scrollToNewsletter = () => {
     newsletterRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -31,7 +33,7 @@ const NewsLetter = () => {
   };
 
   return (
-    <>
+    <LoginContext.Provider value = {{loginStatus, setLoginStatus}}>
       <Navbar />
       <div className="head-container">
         <div className="head-icon">
@@ -97,7 +99,6 @@ const NewsLetter = () => {
             Subscribe to LIT
           </p>
           <p >to receive all about fashion</p>
-          {/* <h4>Join the fashion-gaming community and get early updates</h4> */}
           {submitted ? (
             <h1>Thank you for subscribing!</h1>
           ) : (
@@ -110,13 +111,12 @@ const NewsLetter = () => {
                 required
               />
               <button type="submit">Subscribe</button>
-              
             </form>
           )}
         </div>
       </div>
       <Footer/>
-    </>
+    </LoginContext.Provider>
   );
 };
 

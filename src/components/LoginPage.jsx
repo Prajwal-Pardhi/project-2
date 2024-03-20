@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { ImCross } from "react-icons/im";
+import { LoginContext } from "../LoginContext";
 
 const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
   const [username, setUsername] = useState("");
@@ -8,6 +9,7 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [resopnseSend, setResponseSend] = useState(false);
+  const { loginStatus, setLoginStatus } = useContext(LoginContext);
 
   const sendForm = async () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -26,11 +28,13 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
       setError(false);
       // Send the form data to the backend server
       try {
-        const response = await axios.post("/api/login", {
-          username,
-          email,
-          password,
-        });
+        // const response = await axios.post("/api/login", {
+        //   username,
+        //   email,
+        //   password,
+        // });
+
+
         // Save the token to local storage
         localStorage.setItem("token", "userisloggedin");//response.data.token used instead of string // Save the token to local storage
         // if (localStorage.getItem("token")) {
@@ -39,6 +43,9 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
         //   console.log("User is not logged in");
         // }
         setResponseSend(true);
+        setLoginStatus(true);
+        console.log("User is logged in");
+        
         setTimeout(() => {
           setOpenLoginModal(false);
         }, 1000);

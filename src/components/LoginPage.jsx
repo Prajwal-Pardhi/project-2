@@ -9,7 +9,7 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [resopnseSend, setResponseSend] = useState(false);
-  const { loginStatus, setLoginStatus } = useContext(LoginContext);
+  // const { loginStatus, setLoginStatus } = useContext(LoginContext);
 
   const sendForm = async () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -29,12 +29,11 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
       // Send the form data to the backend server
       try {
         // const response = await axios.post("/api/login", {
-        //   username,
-        //   email,
-        //   password,
+        //   "username": username,
+        //   "email": email,
+        //   "password": password,
         // });
-
-
+        
         // Save the token to local storage
         localStorage.setItem("token", "userisloggedin");//response.data.token used instead of string // Save the token to local storage
         // if (localStorage.getItem("token")) {
@@ -43,11 +42,12 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
         //   console.log("User is not logged in");
         // }
         setResponseSend(true);
-        setLoginStatus(true);
+        // setLoginStatus(true);
         console.log("User is logged in");
         
         setTimeout(() => {
           setOpenLoginModal(false);
+          setResponseSend(false);
         }, 1000);
       } catch (error) {
         console.error("Error sending form data", error);

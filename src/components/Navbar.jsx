@@ -7,8 +7,6 @@ import SubscribeModal from "./SubscribeModal";
 import LoginPage from "./LoginPage";
 // import "../Navbar.css"; // Import custom CSS for navbar styling
 
-// import '../Navbar.css'; // Import custom CSS for navbar styling
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSubscribeModal, setOpenSubscribeModal] = useState(false);

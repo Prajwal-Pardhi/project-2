@@ -674,6 +674,9 @@ body {
     margin-left: 10px;
     /* border-left: none; */
   }
+  .nav-login-btn{
+    padding: 5px 5px;
+  }
 
   .nav-links a {
     color: white;

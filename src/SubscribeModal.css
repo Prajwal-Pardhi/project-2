@@ -54,7 +54,7 @@
 }
 
 .right-form-container {
-  margin-left: 20px;
+  margin-left: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -83,21 +83,22 @@
 .modal-input-label {
   display: flex;
   flex-direction: column;
+  font-size: 13px;
 }
 
 .modal-input {
-  width: 350px;
-  height: 10px;
-  font-size: 0.95rem;
-  margin-top: 5px;
-  padding: 10px;
+  width: 97%;
+    height: 10px;
+    margin-top: 5px;
+    padding: 8px 1%;
+    font-size: 14px;
 }
 
 .modal--input-text {
   font-weight: 410;
 }
 
-.modal-footer-button {
+/* .modal-footer-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +116,7 @@
   height: 40px;
   padding: 0 16px;
   text-decoration: none;
-}
+} */
 
 .modal-title-image {
   display: flex;
@@ -133,23 +134,63 @@
   color: black;
   margin-left: 20px;
 }
+.modal-button-google-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 20px; */
+
+}
+.modal-button-google{
+  background-color: #d2c09f;
+  color: black;
+  /* padding: 5px 30px; */
+  width: 100%;
+  padding: 5px 0;
+  font-weight: bold;
+  border: none;
+}
 
 .modal-button-send {
   background-color: #d2c09f;
   color: black;
-  padding: 0 50px;
+  padding: 5px 0px;
+  width: 100%;
   font-weight: bold;
-
+  border: none;
 }
 .right-form-title{
   font-size: larger;
   font-weight: bold;
-  
 }
 .modal-email-sent-text p{
   margin-top: 20px;
   font-size: large;
-   
+}
+.sign-up-option{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+  margin-top: 3px;
+}
+.modal-other-login-options{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-login-signup-option{
+  color: black;
+  cursor: pointer;
+}
+.modal-login-signup-option:hover{
+  text-decoration: underline;
+}
+.error-message{
+  color: red;
+  font-size: small;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 600px) {

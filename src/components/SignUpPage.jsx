@@ -2,41 +2,44 @@ import React, { useState, useContext, useEffect } from "react";
 import { ImCross } from "react-icons/im";
 import { FcGoogle } from "react-icons/fc";
 import { LoginContext } from "../LoginContext";
-import { Link } from "react-router-dom";
-import SignUp from "./SignUpPage";
 
-const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
+const SignUpPage = ({
+  openSignUpModal,
+  setOpenSignUpModal,
+  openLoginModal,
+  setOpenLoginModal,
+}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [resopnseSend, setResponseSend] = useState(false);
-  const [openSignUpModal, setOpenSignUpModal] = useState(false);
   // const { loginStatus, setLoginStatus } = useContext(LoginContext);
 
   const sendForm = async () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email) || !password) {
-      if (!email || !emailRegex.test(email)) {
+    if (!username || !email || !emailRegex.test(email) || !password) {
+      if (!username) {
+        setErrorMsg("Please enter a valid username.");
+      } else if (!email || !emailRegex.test(email)) {
         setErrorMsg("Please enter a valid email.");
       } else if (!password) {
         setErrorMsg("Please enter a valid password.");
       }
       setError(true);
-
-
     } else {
       setError(false);
-      // Send the form data to the backend server to check user exist or not??
+      // Send the form data to the backend server
       try {
         // const response = await axios.post("/api/login", {
+        //   "username": username,
         //   "email": email,
         //   "password": password,
         // });
-        
+
         // Save the token to local storage
-        localStorage.setItem("token", "userisloggedin");//response.data.token used instead of string // Save the token to local storage
+        localStorage.setItem("token", "userisloggedin"); //response.data.token used instead of string // Save the token to local storage
         // if (localStorage.getItem("token")) {
         //   console.log("User is logged in");
         // } else {
@@ -45,7 +48,7 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
         setResponseSend(true);
         // setLoginStatus(true);
         console.log("User is logged in");
-        
+
         setTimeout(() => {
           setOpenLoginModal(false);
           setResponseSend(false);
@@ -76,12 +79,12 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
                 <p className="right-form-title">LUXURY IN TASTE</p>
                 <div>
                   <div className="modal-text">
-                    Sign in to get access to the latest news and updates.
+                    Sign up to get access to the latest news and updates.
                   </div>
                 </div>
                 <div>
                   <div className="modal-input-label">
-                    {/* <label className="modal--input-text">Username</label>
+                    <label className="modal--input-text">Username</label>
                     <input
                       placeholder="Username"
                       className="modal-input"
@@ -89,7 +92,7 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
                       type="text"
                       required={true}
                       onChange={(e) => setUsername(e.target.value)}
-                    /> */}
+                    />
 
                     <label className="modal--input-text">Email address</label>
                     <input
@@ -117,17 +120,22 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
                       className="modal-footer-button modal-button-send"
                       onClick={sendForm}
                     >
-                      Login
+                      Sign Up
                     </button>
                   </div>
                   <div className="sign-up-option">
-                  Don't have an account? <div onClick={()=>{
-                    // setOpenLoginModal(false);
-                    setOpenSignUpModal(true);
-                  }} className="modal-login-signup-option">Sign Up</div>
+                    Already have an account?{" "}
+                    <div
+                      onClick={() => {
+                        // setOpenLoginModal(false);
+                        setOpenSignUpModal(false);
+                      }}
+                      className="modal-login-signup-option"
+                    >
+                      Sign In
+                    </div>
+                  </div>
                 </div>
-                </div>
-
                 <div className="modal-other-login-options"> 
                   <div>----- or -----</div>
                   {/* button to log in with google */}
@@ -146,7 +154,7 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
         <div className="main-content-container">
           <div className="modal-email-sent-text">
             <div>
-              <p>Logged In Successfully</p>
+              <p>Signed Up Successfully</p>
             </div>
             <div>
               <p>Thank You..</p>
@@ -154,17 +162,8 @@ const LoginPage = ({ openLoginModal, setOpenLoginModal }) => {
           </div>
         </div>
       )}
-      {openSignUpModal && (
-        <SignUp
-          openSignUpModal={openSignUpModal}
-          setOpenSignUpModal={setOpenSignUpModal}
-          openLoginModal={openLoginModal}
-          setOpenLoginModal={setOpenLoginModal}
-        />
-      )
-      }
     </>
   );
 };
 
-export default LoginPage;
+export default SignUpPage;

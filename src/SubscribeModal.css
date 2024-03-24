@@ -205,7 +205,8 @@
     height: 60vh;
   }
   .right-form-container {
-    width: 90%;
+    width: 100%;
+    margin-left: 3%;
   }
   .modal-input-label {
     width: 100%;

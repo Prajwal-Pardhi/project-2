@@ -141,7 +141,7 @@ const SignUpPage = ({
                   {/* button to log in with google */}
                   <button className="modal-button-google">
                     <div className="modal-button-google-container">
-                      <FcGoogle size={20} style={{marginRight:"5px"}}/>Login with Google
+                      <FcGoogle size={20} style={{marginRight:"5px"}}/>Sign up with Google
                     </div>
                   </button>
                 </div>

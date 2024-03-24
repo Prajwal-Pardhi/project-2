@@ -78,9 +78,13 @@ const SignUpPage = ({
               <div className="right-form-container">
                 <p className="right-form-title">LUXURY IN TASTE</p>
                 <div>
+                  <div className="modal-text" style={{fontWeight:"bold", }}>
+                    Create new account
+                  </div>
                   <div className="modal-text">
                     Sign up to get access to the latest news and updates.
                   </div>
+          
                 </div>
                 <div>
                   <div className="modal-input-label">
